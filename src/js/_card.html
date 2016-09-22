@@ -1,0 +1,21 @@
+<div class="card">
+  <% for (var i = 0; i < 12; i++) { %>
+  <div class="cell">
+    <span class="text">
+      <%= data[i] %>
+    </span>
+  </div>
+  <% } %>
+  <div class="cell free tapped">
+    <span class="text">
+      FREE SPACE
+    </span>
+  </div>
+  <% for (var i = 12; i < data.length; i++) { %>
+  <div class="cell">
+    <span class="text">
+      <%= data[i] %>
+    </span>
+  </div>
+  <% } %>
+</div>
