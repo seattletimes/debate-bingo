@@ -52,8 +52,6 @@ h3 {
     .flex(0 0 20%);
     min-height: 100px;
     text-align: center;
-    padding: 10px;
-    border: 1px solid white;
     background: @df-off-white;
     cursor: pointer;
     .display-flex();
@@ -65,7 +63,6 @@ h3 {
 
     @media @mobile {
       font-size: 10px;
-      padding: 10px 0px;
     }
 
     &.tapped {
@@ -76,6 +73,14 @@ h3 {
 
     &.free {
       font-weight: bold;
+    }
+
+    .text {
+      padding: 10px;
+
+      @media @mobile {
+        padding: 0;
+      }
     }
   }
 }
