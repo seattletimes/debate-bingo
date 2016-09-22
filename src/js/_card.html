@@ -1,4 +1,9 @@
 <div class="card">
+  <% "BINGO".split("").forEach(function(l) { %>
+  <div class="bingo">
+    <%= l %>
+  </div>
+  <% }); %>
   <% for (var i = 0; i < 12; i++) { %>
   <div class="cell">
     <span class="text">

@@ -14,7 +14,7 @@ var makeCard = function() {
 
   document.querySelector(".card-container").innerHTML = template(selected);
 
-  $(".cell").forEach(el => el.addEventListener("click", function() { this.classList.toggle("tapped") }));
+  $(".cell:not(.free)").forEach(el => el.addEventListener("click", function() { this.classList.toggle("tapped") }));
 };
 
 makeCard();

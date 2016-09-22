@@ -4,9 +4,49 @@
   max-width: 630px;
 }
 
+h2, h3 {
+  display: block;
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  font-size: 36px;
+
+  @media @mobile {
+    font-size: 24px;
+  }
+}
+
+h3 {
+  letter-spacing: 4px;
+}
+
+.topper {
+  .display-flex();
+  .justify-content(space-around);
+  .align-items(center);
+
+  .party-icon {
+    .flex(0 1 20%);
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
 .card {
+  clear: both;
   .display-flex();
   .flex-wrap(wrap);
+  margin-top: 20px;
+
+  .bingo {
+    .flex(0 0 20%);
+    text-align: center;
+    font-weight: bold;
+  }
 
   .cell {
     .flex(0 0 20%);
@@ -21,6 +61,7 @@
     .justify-content(center);
     overflow: hidden;
     font-size: 14px;
+    border-radius: 2px;
 
     @media @mobile {
       font-size: 10px;
@@ -29,8 +70,12 @@
 
     &.tapped {
       background: @st-light-orange;
-      border: 1px solid @st-dark-orange;
+      // border: 1px solid @df-dark-gray;
       // color: white;
+    }
+
+    &.free {
+      font-weight: bold;
     }
   }
 }
